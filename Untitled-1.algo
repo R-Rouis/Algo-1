@@ -1,0 +1,23 @@
+ALGORITHM algorithm_phrase
+VAR
+sentence=STRING
+x,INTEGER:=0;
+mot:INTEGER:=1;
+BEGIN
+    write("entrer votre phrase");
+    read(sentence);
+    WHILE (sentence[i]<>'.') AND (sentence<>null) DO
+        IF (sentence[i]='a') OR (sentence[i]='e') OR (sentence[i]='i') OR (sentence[i]='u') 
+        OR (sentence[i]='o') OR (sentence[i]='y') THEN
+        x=x+1;
+        else IF (sentence[i]='') THEN
+            mot=mot+1;
+        END_IF
+        END_IF
+        i:=i+1;
+    END_WHILE
+    write ("le nombre de voyelle");
+    write(x);
+    write("le nombre du mot est",mot);
+    write("le nombre des lettres est",i);
+END
